@@ -36,7 +36,7 @@
               if (me.name) {
                 document.getElementById('auth-displayname').innerHTML = me.name;
               }
-              $('#profile-pic').append('<img src="https://graph.facebook.com/'+me+'/picture">')
+              $('#profile-pic').append('<img src="https://graph.facebook.com/'+me.username+'/picture">')
             })
             document.getElementById('auth-loggedout').style.display = 'none';
             document.getElementById('auth-loggedin').style.display = 'block';
