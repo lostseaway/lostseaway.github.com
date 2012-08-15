@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Facebook Client-side Authentication Example</title>
+    <script src="js/jquery-1.7.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/jquery.color.js"></script>
   </head>
   <body>
     <div id="fb-root"></div>
@@ -33,6 +36,7 @@
               if (me.name) {
                 document.getElementById('auth-displayname').innerHTML = me.name;
               }
+              $('#profile-pic').append('<img src="https://graph.facebook.com/'+me+'/picture">')
             })
             document.getElementById('auth-loggedout').style.display = 'none';
             document.getElementById('auth-loggedin').style.display = 'block';
@@ -59,7 +63,7 @@
           <a href="#" id="auth-loginlink">Login</a>
         </div>
         <div id="auth-loggedin" style="display:none">
-          Hi, <span id="auth-displayname"></span>  
+          Hi, <span id="profile-pic"></span><span id="auth-displayname"></span>  
         (<a href="#" id="auth-logoutlink">logout</a>)
       </div>
     </div>
