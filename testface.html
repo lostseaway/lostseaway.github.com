@@ -33,14 +33,11 @@
               if (me.name) {
                 document.getElementById('auth-displayname').innerHTML = me.name;
               }
-              FB.api('/platform/posts', { limit: 3 }, function(response) {
-                for (var i=0, l=response.length; i<l; i++) {
-    var post = response[i];
-    if (post.message) {
-      alert('Message: ' + post.message);
-    } else if (post.attachment && post.attachment.name) {
-      alert('Attachment: ' + post.attachment.name);
-    }
+              FB.api('/me/home', { limit: 3 },function displayUser(user) 
+              {
+                for (var i = 0; i < user.data.length; i ++)
+                {$('#feed').append(user.data[i].id+"<br>"+user.data[i].message+"<br>--------------------------------<br>")}
+              }
   }
 });
             })
@@ -73,6 +70,7 @@
         (<a href="#" id="auth-logoutlink">logout</a>)
       </div>
     </div>
+    <div id="feed"></div>
     <div id="fb-root"></div>
   </body>
 </html>
