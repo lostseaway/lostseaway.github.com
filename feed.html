@@ -1,42 +1,43 @@
-<html>
-	<head>
-		<script src="js/jquery-1.7.1.min.js"></script>
-		<script src="js/bootstrap.js"></script>
-		<script type="text/javascript">
-		     function displayUser(user) 
-		     {
-		       /*var userName = document.getElementById('userName');
-		       var greetingText = document.createTextNode('Greetings, '
-		         + user.data[0].id + '.');
-		   userName.appendChild(greetingText);*/
-		    for (var i = 0; i < user.data.length; i ++)
-		      {$('#feed').append(user.data[i].id+"<br>"+user.data[i].message+"<br>--------------------------------<br>")}
-		     }
+<html> 
+   <head> 
+     <title>Client-side OAuth Example</title> 
+   </head> 
+   <body> 
+  <script src="js/jquery-1.7.1.min.js"></script>
+   <script src="js/bootstrap.js"></script>
+   <script> 
+     function displayUser(user) 
+     {
+       /*var userName = document.getElementById('userName');
+       var greetingText = document.createTextNode('Greetings, '
+         + user.data[0].id + '.');
+   userName.appendChild(greetingText);*/
+    for (var i = 0; i < user.data.length; i ++)
+      {$('#userName').append(user.data[i].id+"<br>"+user.data[i].message+"<br>--------------------------------<br>")}
+     }
 
-		     var appID = '175123692622796';
-		     if (window.location.hash.length == 0) {
-		       var path = 'https://www.facebook.com/dialog/oauth?';
-		   var queryParams = ['client_id=' + appID,
-		     'redirect_uri=' + window.location,
-		     'response_type=token'];
-		   var query = queryParams.join('&');
-		   var url = path + query;
-		   window.open(url,"_self");
-		     } else {
-		       var accessToken = window.location.hash.substring(1);
-		       var path = "https://graph.facebook.com/me/home?";
-		   var queryParams = [accessToken, 'callback=displayUser'];
-		   var query = queryParams.join('&');
-		   var url = path + query;
+     var appID = '175123692622796';
+     if (window.location.hash.length == 0) {
+       var path = 'https://www.facebook.com/dialog/oauth?';
+   var queryParams = ['client_id=' + appID,
+     'redirect_uri=' + window.location,
+     'response_type=token'];
+   var query = queryParams.join('&');
+   var url = path + query;
+   window.open(url,"_self");
+     } else {
+       var accessToken = window.location.hash.substring(1);
+       var path = "https://graph.facebook.com/me/home?";
+   var queryParams = [accessToken, 'callback=displayUser'];
+   var query = queryParams.join('&');
+   var url = path + query;
 
-		   // use jsonp to call the graph
-		       var script = document.createElement('script');
-		       script.src = url;
-		       document.body.appendChild(script);        
-		     }
-		</script>
-	</head>
-	<body>
-		<p id="feed"></div>
-	</body>
-</html>
+   // use jsonp to call the graph
+       var script = document.createElement('script');
+       script.src = url;
+       document.body.appendChild(script);        
+     }
+   </script> 
+   <p id="userName"></p> 
+   </body> 
+  </html>
