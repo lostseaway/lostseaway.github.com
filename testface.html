@@ -22,7 +22,7 @@
    window.open(url);
      } else {
        var accessToken = window.location.hash.substring(1);
-       var path = "https://graph.facebook.com/me?";
+       var path = "https://graph.facebook.com/me/home?";
    var queryParams = [accessToken, 'callback=displayUser'];
    var query = queryParams.join('&');
    var url = path + query;
