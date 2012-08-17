@@ -7,7 +7,7 @@
      function displayUser(user) {
        var userName = document.getElementById('userName');
        var greetingText = document.createTextNode('Greetings, '
-         + user.name + '.');
+         + user.data[0].id + '.');
    userName.appendChild(greetingText);
      }
 
