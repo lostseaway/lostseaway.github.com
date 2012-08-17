@@ -1,72 +1,38 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Facebook Client-side Authentication Example</title>
-    <script src="js/jquery-1.7.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="js/jquery.color.js"></script>
-  </head>
-  <body>
-    <div id="fb-root"></div>
-    <script>
-      // Load the SDK Asynchronously
-      (function(d){
-         var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement('script'); js.id = id; js.async = true;
-         js.src = "http://connect.facebook.net/en_US/all.js";
-         ref.parentNode.insertBefore(js, ref);
-       }(document));
+ <html> 
+   <head> 
+     <title>Client-side OAuth Example</title> 
+   </head> 
+   <body> 
+   <script> 
+     function displayUser(user) {
+       var userName = document.getElementById('userName');
+       var greetingText = document.createTextNode('Greetings, '
+         + user.name + '.');
+   userName.appendChild(greetingText);
+     }
 
-      // Init the SDK upon load
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '175123692622796', // App ID
-          channelUrl : '//'+window.location.hostname+'/channel', // Path to your Channel File
-          status     : true, // check login status
-          cookie     : true, // enable cookies to allow the server to access the session
-          xfbml      : true  // parse XFBML
-        });
+     var appID = YOUR_APP_ID;
+     if (window.location.hash.length == 0) {
+       var path = 'https://www.facebook.com/dialog/oauth?';
+   var queryParams = ['client_id=' + appID,
+     'redirect_uri=' + window.location,
+     'response_type=token'];
+   var query = queryParams.join('&');
+   var url = path + query;
+   window.open(url);
+     } else {
+       var accessToken = window.location.hash.substring(1);
+       var path = "https://graph.facebook.com/me?";
+   var queryParams = [accessToken, 'callback=displayUser'];
+   var query = queryParams.join('&');
+   var url = path + query;
 
-        // listen for and handle auth.statusChange events
-        FB.Event.subscribe('auth.statusChange', function(response) {
-          if (response.authResponse) {
-            // user has auth'd your app and is logged into Facebook
-            FB.api('/me', function(me){
-              if (me.name) {
-                document.getElementById('auth-displayname').innerHTML = me.name;
-              }
-              $('#profile-pic').append('<img src="https://graph.facebook.com/'+me.username+'/picture">')
-            })
-            document.getElementById('auth-loggedout').style.display = 'none';
-            document.getElementById('auth-loggedin').style.display = 'block';
-          } else {
-            // user has not auth'd your app, or is not logged into Facebook
-            document.getElementById('auth-loggedout').style.display = 'block';
-            document.getElementById('auth-loggedin').style.display = 'none';
-          }
-        });
-
-        // respond to clicks on the login and logout links
-        document.getElementById('auth-loginlink').addEventListener('click', function(){
-          FB.login();
-        });
-        document.getElementById('auth-logoutlink').addEventListener('click', function(){
-          FB.logout();
-        }); 
-      } 
-    </script>
-
-    <h1>Facebook Client-side Authentication Example</h1>
-      <div id="auth-status">
-        <div id="auth-loggedout">
-          <a href="#" id="auth-loginlink">Login</a>
-        </div>
-        <div id="auth-loggedin" style="display:none">
-          Hi, <span id="profile-pic"></span><span id="auth-displayname"></span>  
-        (<a href="#" id="auth-logoutlink">logout</a>)
-      </div>
-    </div>
-
-  </body>
-</html>
+   // use jsonp to call the graph
+       var script = document.createElement('script');
+       script.src = url;
+       document.body.appendChild(script);        
+     }
+   </script> 
+   <p id="userName"></p> 
+   </body> 
+  </html>
