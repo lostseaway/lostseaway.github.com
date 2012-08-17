@@ -26,11 +26,15 @@
         });
 
         // listen for and handle auth.statusChange events
-        FB.Event.subscribe('auth.statusChange', function(response) {
-          if (response.authResponse) {
+        FB.Event.subscribe('auth.statusChange', function(response) 
+        {
+          if (response.authResponse) 
+          {
             // user has auth'd your app and is logged into Facebook
-            FB.api('/me', function(me){
-              if (me.name) {
+            FB.api('/me', function(me)
+            {
+              if (me.name) 
+              {
                 document.getElementById('auth-displayname').innerHTML = me.name;
               }
               FB.api('/me/home', { limit: 3 },function displayUser(user) 
@@ -38,8 +42,8 @@
                 for (var i = 0; i < user.data.length; i ++)
                 {$('#feed').append(user.data[i].id+"<br>"+user.data[i].message+"<br>--------------------------------<br>")}
               }
-  }
-});
+            }
+          }
             })
             document.getElementById('auth-loggedout').style.display = 'none';
             document.getElementById('auth-loggedin').style.display = 'block';
