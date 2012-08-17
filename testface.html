@@ -37,14 +37,14 @@
               {
                 document.getElementById('auth-displayname').innerHTML = me.name;
               }
-              FB.api('/me/home', { limit: 3 },function displayUser(user) 
-              {
-                for (var i = 0; i < user.data.length; i ++)
-                {$('#feed').append(user.data[i].id+"<br>"+user.data[i].message+"<br>--------------------------------<br>")}
-              }
+            }
+            FB.api('/me/home', { limit: 3 },function displayUser(user) 
+            {
+              for (var i = 0; i < user.data.length; i ++)
+              {$('#feed').append(user.data[i].id+"<br>"+user.data[i].message+"<br>--------------------------------<br>")}
             }
           }
-            })
+        })
             document.getElementById('auth-loggedout').style.display = 'none';
             document.getElementById('auth-loggedin').style.display = 'block';
           } else {
