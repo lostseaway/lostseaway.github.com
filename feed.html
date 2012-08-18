@@ -1,6 +1,7 @@
 <html> 
    <head> 
-     <title>Client-side OAuth Example</title> 
+     <title></title>
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
    </head> 
    <body> 
   <script src="js/jquery-1.7.1.min.js"></script>
@@ -13,7 +14,7 @@
          + user.data[0].id + '.');
    userName.appendChild(greetingText);*/
     for (var i = 0; i < user.data.length; i ++)
-      {$('#userName').append(user.data[i].id+"<br>"+user.data[i].message+"<br>--------------------------------<br>")}
+      {$('#userName').append('<div class="span8"style="border:1px dashed;border-right-width:0px;border-left-width:0px;border-bottom-width:0px;padding:4px"><div class="span1"style="margin-left:0px;margin-top:7px"><img src="http://graph.facebook.com/'+user.data[i].from.id+'/picture"></div><div class="span1"style="width:130px;margin-left:0px;background:white;-webkit-border-radius:10px;padding:5px;"><h6>'+user.data[i].from.name+'</h6></div>')}
      }
 
      var appID = '175123692622796';
