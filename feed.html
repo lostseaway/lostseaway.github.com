@@ -16,7 +16,7 @@
     for (var i = 0; i < user.data.length; i ++)
       {
         $('#userName').append('<div id="fb_box'+i+'"class="span6"style="border:1px dashed;border-right-width:0px;border-left-width:0px;border-bottom-width:0px;padding:4px"><div class="span1"style="margin-left:0px;margin-top:7px"><img src="http://graph.facebook.com/'+user.data[i].from.id+'/picture"></div><div class="span4"style="margin-left:0px;background:white;-webkit-border-radius:10px;padding:5px;"><h6>'+user.data[i].from.name+'</h6></div>')}
-        if (user.data[i].message!=undefined) {$('#fb_box'+i).append('<div class="span5">'+user.data[i].message+'</div>')};
+        /*if (user.data[i].message!=undefined) {*/$('#fb_box'+i).append('<div class="span5">'+user.data[i].message+'</div>')/*};*/
         if (user.data[i].type=="photo") {$('#fb_box'+i).append('<div class="span5"><img src="'+user.data[i].picture+'"></div>')};
      }
 
