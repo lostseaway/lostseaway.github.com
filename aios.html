@@ -30,7 +30,7 @@
               $('#fb_pfname').html(me.name);
               $('#not_login').css('display','none');
               $('#logined').css('display','')
-              $('#timeline').html('<iframe id="fbiframe"src="feed.html" frameBorder="0" style="width:100%;height:100%;"></iframe> ')
+              $('#fb_feed').('<iframe id="fbiframe"src="feed.html" frameBorder="0" style="width:100%;height:100%;"></iframe> ')
               $('#timeline').css('display','')
 
             })
@@ -88,6 +88,7 @@
 
 		<div id="timeline" class="span8" style="background:white;height:88%;-webkit-border-radius:10px;padding:10px;display:none;">
       <a href=""><img src="http://www.survivinggrady.com/wp-content/plugins/tweet-blender/img/ajax-refresh-icon.gif" onclick="reloadiframe()"></a>
+      <div id="fb_feed"></div>
     </div>
 	</body>
 
