@@ -45,7 +45,7 @@
       {
         FB.api('/me/feed', 'post',  
         {  
-          message: timeline.val,  
+          message:$('#fb_status').val(),  
         }, 
         function(response) {  
         if (!response || response.error) {  
