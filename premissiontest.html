@@ -16,7 +16,7 @@
     });
 
     // Permissions that are needed for the app
-    var permsNeeded = ['email', 'read_stream', 'user_likes'];
+    var permsNeeded = ['user_about_me','email', 'read_stream', 'user_likes','publish_stream'];
     
     // Function that checks needed user permissions
     var checkPermissions = function() {
@@ -41,7 +41,7 @@
     };
     
     // Re-prompt user for missing permissions
-    var promptForPerms = function(perms) {
+    var promptForPerms = function(perms) 
         FB.login(function(response) {
           console.log(response);
         }, {scope: perms.join(',')});
@@ -68,12 +68,8 @@
     document.getElementById('checkPerms').onclick = function() {
       checkPermissions();
     };
-
-    document.getElementById('removePerms').onclick = function() {
-      removePermissions(['read_stream']);
-    };
    </script>
    <br>
-   <iframe src="feed.html" style="width:100%;height:100%;"></iframe>	
+   <iframe src="feed.html" frameBorder="0" style="width:100%;height:100%;"></iframe>	
   </body>
 </html>
