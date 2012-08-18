@@ -43,17 +43,21 @@
           });
       function FBstatusupdate()
       {
-        FB.api('/me/feed', 'post',  
-        {  
-          message:$('#fb_status').val(),  
-        }, 
-        function(response) {  
-        if (!response || response.error) {  
-alert('Oops! User Denied Access');  
-        } else {  
-alert('Success: Content Published');  
-        }  
-    });  
+        if($('#fb_status').val()!="")
+        {
+          FB.api('/me/feed', 'post',  
+          {  
+            message:$('#fb_status').val(),  
+          }, 
+            function(response) {  
+              if (!response || response.error) {  
+              alert('Oops! User Denied Access');  
+            } else {  
+              alert('Success: Content Published');$('#fb_status').val('');  
+            }  
+          }); 
+        }
+        else{alert('Please Type sth to post!!')} 
       };
     </script>
 		<div id="title_bar" style="background:#434951;height:35px;-moz-box-shadow: 3px 3px 4px #000;-webkit-box-shadow: 3px 3px 4px #000;box-shadow: 3px 3px 4px #000;">
