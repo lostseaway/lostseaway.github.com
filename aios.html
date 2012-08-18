@@ -26,11 +26,11 @@
     FB.Event.subscribe('auth.statusChange', function(response) {
           if (response.authResponse) {
           	FB.api('/me', function(me){
-              $('#fb_pfpic').append('<img src="http://graph.facebook.com/'+me.id+'/picture">');
-              $('#fb_pfname').append(me.name);
+              $('#fb_pfpic').html('<img src="http://graph.facebook.com/'+me.id+'/picture">');
+              $('#fb_pfname').html(me.name);
               $('#not_login').css('display','none');
               $('#logined').css('display','')
-              $('#timeline').append('<iframe src="feed.html" frameBorder="0" style="width:100%;height:100%;"></iframe> ')
+              $('#timeline').html('<iframe src="feed.html" frameBorder="0" style="width:100%;height:100%;"></iframe> ')
               $('#timeline').css('display','')
 
             })
@@ -38,6 +38,7 @@
           else {
           	  $('#not_login').css('display','');
               $('#logined').css('display','none')
+              $('#timeline').css('display','none')
           }
           });
     </script>
