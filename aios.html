@@ -26,7 +26,7 @@
     FB.Event.subscribe('auth.statusChange', function(response) {
           if (response.authResponse) {
           	FB.api('/me', function(me){
-              $('#fb_pfpic').append('<img src="http://graph.facebook.com/'+me.username+'/picture">');
+              $('#fb_pfpic').append('<img src="http://graph.facebook.com/'+me.id+'/picture">');
               $('#fb_pfname').append(me.name);
               $('#not_login').css('display','none');
               $('#logined').css('display','')
