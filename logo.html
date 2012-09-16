@@ -11,7 +11,7 @@
 			{
 				for(var i=0;i<data.length;i++)
 				{
-					$('#content').append('<img src=\"'+data[i].img+'\" style=\"height:300px\"><br><h5 style=\"color:white\">Created by '+data[i].by+'<br>')
+					$('#content').append('<div style=\"border-style:groove;border-width:5px;><br><h4 style=\"color:white\"></h4><br><img src=\"'+data[i].img+'\" style=\"height:300px\"><br><h5 style=\"color:white\">'+(i+1)+'. Created by '+data[i].by+'</div><br>')
 				}
 			}
 		</script>
