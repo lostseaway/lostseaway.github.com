@@ -12,6 +12,7 @@
 	</head>
 	<body id="body"style ="background :black">
 		<script>
+			var credit=0;
 			var m = new Array();
 			var t = new Array();
 			var w = new Array();
@@ -27,8 +28,8 @@
 			$(document).on('ready', onStart)
 			function onStart()
 			{	
-
-				for(var i=0;i<36;i++)
+				$("#show_credit").html(credit);
+				for(var i=0;i<40;i++)
 				{
 
 					var show='<tr id=\"'+i+'\">';
@@ -159,6 +160,8 @@
 				$("#bt_"+i).css("display","none");
 				$("#btr_"+i).css("display","");
 				$("#"+i).addClass('success');
+				credit+=data[i].credit;
+				$("#show_credit").html(credit);
 
 
 			}
@@ -215,12 +218,15 @@
 				$("#bt_"+i).css("display","");
 				$("#btr_"+i).css("display","none");
 				$("#"+i).removeClass('success');
+				credit-=data[i].credit;
+				$("#show_credit").html(credit);
 
 
 
 			}
 		</script>
 		<div class="container" style="position: fixed;background:black;width:100%;">
+			<p style="text-align:center;font-size:30px;color:white">Credit : <a id="show_credit"></a></p>
 			<table  id="main_table"class="table table-bordered" style="font-size:9px; color:#FF0099;background:black;height:230px">
 				<thead>
 					<tr id="toptable" style="display:none">
