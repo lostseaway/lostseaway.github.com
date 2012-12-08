@@ -1,365 +1,168 @@
 <html>
 	<head>
 		<title>
-		 Study Calendar V.1.25 beta
+		 Study Calendar V.2.00 beta
 		</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<script src="js/jquery-1.7.1.min.js"></script>
 		<script src="js/bootstrap.js"></script>
+		<script src="js/cldata.js"></script>
+	
 
 	</head>
-	<body style ="background :black">
-		<script type="text/javascript">
-			var SPc=0;
-			var CSEc=0;
-			var CPc=0;
-			var Dc=0;
-			var LPc=0;
-			var Mc=0;
-			var Ec=0;
-			var list=1;
+	<body id="body"style ="background :black">
+		<script>
 			var m = new Array();
 			var t = new Array();
 			var w = new Array();
 			var th = new Array()
 			var f = new Array()
 			var s = new Array()
-			for(var i=0;i<21;i++){ m[i]=0;}
-			for(var i=0;i<21;i++){ t[i]=0;}
-			for(var i=0;i<21;i++){ w[i]=0;}
-			for(var i=0;i<21;i++){ th[i]=0;}
-			for(var i=0;i<21;i++){ f[i]=0;}
-			for(var i=0;i<21;i++){ s[i]=0;}
+			for(var i=0;i<25;i++){ m[i]=0;}
+			for(var i=0;i<25;i++){ t[i]=0;}
+			for(var i=0;i<25;i++){ w[i]=0;}
+			for(var i=0;i<25;i++){ th[i]=0;}
+			for(var i=0;i<25;i++){ f[i]=0;}
+			for(var i=0;i<25;i++){ s[i]=0;}
 			$(document).on('ready', onStart)
 			function onStart()
-			{
-				//$('#sat').hide();
-				$('#toptable').hide();
-				for(var i=1;i<7;i++){$('#sp'+i).hide();}
-				for(var i=1;i<6;i++){$('#cse'+i).hide();}
-				for(var i=1;i<3;i++){$('#cp'+i).hide();}
-				$('#cp1_1').hide();
-				$('#cp2_1').hide();
-				for(var i=1;i<4;i++){$('#d'+i).hide();}
-				$('#d1_1').hide();
-				$('#d2_1').hide();
-				$('#d3_1').hide();
-				for(var i=1;i<4;i++){$('#p'+i).hide();}
-				$('#p1_1').hide();
-				$('#p2_1').hide();
-				$('#p3_1').hide();
-				for(var i=1;i<8;i++){$('#lp'+i).hide();}
-				for(var i=1;i<4;i++){$('#mt'+i).hide();}
-				$('#mt1_1').hide();
-				$('#mt2_1').hide();
-				$('#mt3_1').hide();
-				for(var i=1;i<5;i++){$('#e'+i).hide();}
-				$('#e1_1').hide();
-				$('#e2_1').hide();
-				$('#e3_1').hide();
-				$('#e4_1').hide();
-				$('#m0').css('background','#FFFF99');
-				$('#t0').css('background','#FF99CC');
-				$('#w0').css('background','#CCFF99');
-				$('#th0').css('background','#FFCC99');
-				$('#f0').css('background','#CCFFFF');
-				$('#s0').css('background','#CC99FF');
-
-
-			}
-			function SPbutt()
-			{
-				if(SPc==0)
-				{
-					$('#sp1').show('slow');
-					$('#sp2').show('slow');
-					$('#sp3').show('slow');
-					$('#sp4').show('slow');
-					$('#sp5').show('slow');
-					$('#sp6').show('slow');
-					$('#SPbuttTable').html('<button class="btn btn-mini" onclick="SPbutt()">Hide</button>')
-					SPc=1;
-				}
-				else if(SPc==1)
-				{
-					$('#sp1').hide('slow');
-					$('#sp2').hide('slow');
-					$('#sp3').hide('slow');
-					$('#sp4').hide('slow');
-					$('#sp5').hide('slow');
-					$('#sp6').hide('slow');
-					$('#SPbuttTable').html('<button class="btn btn-mini" onclick="SPbutt()">Show</button>')
-					SPc=0;
-				}	
-			}
-			function CPbutt()
-			{
-				if(CPc==0)
-				{
-					$('#cp1').show('slow');
-					$('#cp1_1').show('slow');
-					$('#cp2').show('slow');
-					$('#cp2_1').show('slow');
-					$('#CPbuttTable').html('<button class="btn btn-mini" onclick="CPbutt()">Hide</button>')
-					CPc=1;
-				}
-				else if(CPc==1)
-				{
-					$('#cp1').hide('slow');
-					$('#cp1_1').hide('slow');
-					$('#cp2').hide('slow');
-					$('#cp2_1').hide('slow');
-					$('#CPbuttTable').html('<button class="btn btn-mini" onclick="CPbutt()">Show</button>')
-					CPc=0;
-				}	
-			}
-			function CSEbutt()
-			{
-				if(CSEc==0)
-				{
-					$('#cse1').show('slow');
-					$('#cse2').show('slow');
-					$('#cse3').show('slow');
-					$('#cse4').show('slow');
-					$('#cse5').show('slow');
-					$('#CSEbuttTable').html('<button class="btn btn-mini" onclick="CSEbutt()">Hide</button>')
-					CSEc=1;
-				}
-				else if(CSEc==1)
-				{
-					$('#cse1').hide('slow');
-					$('#cse2').hide('slow');
-					$('#cse3').hide('slow');
-					$('#cse4').hide('slow');
-					$('#cse5').hide('slow');
-					$('#CSEbuttTable').html('<button class="btn btn-mini" onclick="CSEbutt()">Show</button>')
-					CSEc=0;
-				}	
-			}
-			function Dbutt()
-			{
-				if(Dc==0)
-				{
-					$('#d1').show('slow');
-					$('#d1_1').show('slow');
-					$('#d2').show('slow');
-					$('#d2_1').show('slow');
-					$('#d3').show('slow');
-					$('#d3_1').show('slow');
-					$('#DbuttTable').html('<button class="btn btn-mini" onclick="Dbutt()">Hide</button>')
-					Dc=1;
-				}
-				else if(Dc==1)
-				{
-					$('#d1').hide('slow');
-					$('#d1_1').hide('slow');
-					$('#d2').hide('slow');
-					$('#d2_1').hide('slow');
-					$('#d3').hide('slow');
-					$('#d3_1').hide('slow');
-					$('#DbuttTable').html('<button class="btn btn-mini" onclick="Dbutt()">Show</button>')
-					Dc=0;
-				}	
-			}
-			function Pbutt()
-			{
-				if(Dc==0)
-				{
-					$('#p1').show('slow');
-					$('#p1_1').show('slow');
-					$('#p2').show('slow');
-					$('#p2_1').show('slow');
-					$('#p3').show('slow');
-					$('#p3_1').show('slow');
-					$('#PbuttTable').html('<button class="btn btn-mini" onclick="Pbutt()">Hide</button>')
-					Dc=1;
-				}
-				else if(Dc==1)
-				{
-					$('#p1').hide('slow');
-					$('#p1_1').hide('slow');
-					$('#p2').hide('slow');
-					$('#p2_1').hide('slow');
-					$('#p3').hide('slow');
-					$('#p3_1').hide('slow');
-					$('#PbuttTable').html('<button class="btn btn-mini" onclick="Pbutt()">Show</button>')
-					Dc=0;
-				}	
-			}
-			function LPbutt()
-			{
-				if(LPc==0)
-				{
-					$('#lp1').show('slow');
-					$('#lp2').show('slow');
-					$('#lp3').show('slow');
-					$('#lp4').show('slow');
-					$('#lp5').show('slow');
-					$('#lp6').show('slow');
-					$('#lp7').show('slow');
-					$('#LPbuttTable').html('<button class="btn btn-mini" onclick="LPbutt()">Hide</button>')
-					LPc=1;
-				}
-				else if(LPc==1)
-				{
-					$('#lp1').hide('slow');
-					$('#lp2').hide('slow');
-					$('#lp3').hide('slow');
-					$('#lp4').hide('slow');
-					$('#lp5').hide('slow');
-					$('#lp6').hide('slow');
-					$('#lp7').hide('slow');
-					$('#LPbuttTable').html('<button class="btn btn-mini" onclick="LPbutt()">Show</button>')
-					LPc=0;
-				}	
-			}
-			function Mbutt()
-			{
-				if(Mc==0)
-				{
-					$('#mt1').show('slow');
-					$('#mt1_1').show('slow');
-					$('#mt2').show('slow');
-					$('#mt2_1').show('slow');
-					$('#mt3').show('slow');
-					$('#mt3_1').show('slow');
-
-					$('#MbuttTable').html('<button class="btn btn-mini" onclick="Mbutt()">Hide</button>')
-					Mc=1;
-				}
-				else if(Mc==1)
-				{
-					$('#mt1').hide('slow');
-					$('#mt1_1').hide('slow');
-					$('#mt2').hide('slow');
-					$('#mt2_1').hide('slow');
-					$('#mt3').hide('slow');
-					$('#mt3_1').hide('slow');
-					$('#MbuttTable').html('<button class="btn btn-mini" onclick="Mbutt()">Show</button>')
-					Mc=0;
-				}	
-			}
-			function Ebutt()
-			{
-				if(Ec==0)
-				{
-					$('#e1').show('slow');
-					$('#e1_1').show('slow');
-					$('#e2').show('slow');
-					$('#e2_1').show('slow');
-					$('#e3').show('slow');
-					$('#e3_1').show('slow');
-					$('#e4').show('slow');
-					$('#e4_1').show('slow');
-					$('#EbuttTable').html('<button class="btn btn-mini" onclick="Ebutt()">Hide</button>')
-					Ec=1;
-				}
-				else if(Ec==1)
-				{
-					$('#e1').hide('slow');
-					$('#e1_1').hide('slow');
-					$('#e2').hide('slow');
-					$('#e2_1').hide('slow');
-					$('#e3').hide('slow');
-					$('#e3_1').hide('slow');
-					$('#e4').hide('slow');
-					$('#e4_1').hide('slow');
-					$('#EbuttTable').html('<button class="btn btn-mini" onclick="Ebutt()">Show</button>')
-					Ec=0;
-				}	
-			}
-			function add(day,time,du,sub,but,place)
 			{	
-				$('#'+day+time).attr('colspan',du);
-				for(var i=(time*1)+1;i<(du*1)+(time*1);i++){$('#'+day+i).hide();}
-				$('#'+day+time).css('background','#CCCCCC');
-				$('#'+day+time).html('<h5 style="text-align:center;">'+sub+'</h5><br><h5 style="text-align:center;font-size:8px">'+place+'</h5>')
-				$('#'+but+'_b1').addClass("disabled");
-				$('#'+but+'_b2').addClass("disabled");
-				$('#'+but+'_b3').addClass("disabled");
-				$('#'+but+'_b4').addClass("disabled");
-				$('#'+but+'_b5').addClass("disabled");
-				$('#'+but+'_b6').addClass("disabled");
-				$('#'+but+'_b7').addClass("disabled");
-				if(day=='m'){for(var i=(time*1)+1;i<(du*1)+(time*1)+1;i++){m[i-1]=1;}}
-				else if(day=='t'){for(var i=(time*1)+1;i<(du*1)+(time*1)+1;i++){t[i-1]=1;}}
-				else if(day=="w"){for(var i=(time*1)+1;i<(du*1)+(time*1)+1;i++){w[i-1]=1;}}
-				else if(day=="th"){for(var i=(time*1)+1;i<(du*1)+(time*1)+1;i++){th[i-1]=1;}}
-				else if(day=="f"){for(var i=(time*1)+1;i<(du*1)+(time*1)+1;i++){f[i-1]=1;}}
-				addlist(day,time,du,sub,but);
-			}
-			function addlist(day,time,du,sub,but)
-			{	
-				if(day=='m'){day=1;}
-				else if(day=='t'){day=2;}
-				else if(day=="w"){day=3;}
-				else if(day=="th"){day=4;}
-				else if(day=="f"){day=5;}
-				else if(day=="s"){day=6;}
-				if (but=='sp') {but=1;}
-				else if (but=='cse') {but=2;}
-				else if (but=='cp') {but=3;}
-				else if (but=='d') {but=4;}
-				else if (but=='p') {but=5;}
-				else if (but=='lp') {but=6;}
-				else if (but=='mt') {but=7;}
-				else if (but=='e') {but=8;}
-				$('#chosed').append('<tr id="list'+list+'"><td>'+sub+'</td><td><button class="btn btn-danger btn-mini" onclick="remove('+list+','+day+','+time+','+du+','+but+')">Remove</button></td></tr>')
-			}
-			function remove(row,day,time,du,but) 
-			{
-				if(day==1){day='m';}
-				else if(day==2){day='t';}
-				else if(day==3){day='w';}
-				else if(day==4){day='th';}
-				else if(day==5){day='f';}
-				else if(day==6){day='s';}
-				if (but==1) {but='sp';}
-				else if (but==2) {but='cse';}
-				else if (but==3) {but='cp';}
-				else if (but==3) {but='d';}
-				else if (but==5) {but='p';}
-				else if (but==6) {but='lp';}
-				else if (but==7) {but='mt';}
-				else if (but==8) {but='e';}
-				$('#list'+row).remove();
-				$('#'+day+time).attr('colspan',1);
-				for(var i=(time*1)+1;i<(du*1)+(time*1);i++){$('#'+day+i).show();}
-				$('#'+day+time).css('background','black');
-				$('#'+day+time).html('')
-				
-				$('#'+but+'_b1').removeClass("disabled");
-				$('#'+but+'_b2').removeClass("disabled");
-				$('#'+but+'_b3').removeClass("disabled");
-				$('#'+but+'_b4').removeClass("disabled");
-				$('#'+but+'_b5').removeClass("disabled");
-				$('#'+but+'_b6').removeClass("disabled");
-				$('#'+but+'_b7').removeClass("disabled");
-				/*
-				if(day=='m'){for(var i=(time*1)+1;i<(du*1)+(time*1)+1;i++){m[i-1]=1;}}
-				else if(day=='t'){for(var i=(time*1)+1;i<(du*1)+(time*1)+1;i++){t[i-1]=1;}}
-				else if(day=="w"){for(var i=(time*1)+1;i<(du*1)+(time*1)+1;i++){w[i-1]=1;}}
-				else if(day=="th"){for(var i=(time*1)+1;i<(du*1)+(time*1)+1;i++){th[i-1]=1;}}
-				else if(day=="f"){for(var i=(time*1)+1;i<(du*1)+(time*1)+1;i++){f[i-1]=1;}}
-			*/}
 
+				for(var i=0;i<36;i++)
+				{
+
+					var show='<tr id=\"'+i+'\">';
+					show+="<td>"+data[i].code+"</td>";
+					show+="<td>"+data[i].subject+"</td>";
+					show+="<td>"+data[i].sec+"</td>";
+					show+="<td>"+data[i].credit+"</td>";
+					show+="<td>"+data[i].time.day[0]+" "+data[i].time.start[0]+"-"+data[i].time.end[0]+"</td>";
+					show+="<td>"+data[i].place+"</td>";
+					show+="<td>"+data[i].teacher+"</td>";
+					show+="<td><button id=\"bt_"+i+"\"class=\"btn btn-info btn-mini\" onclick=\"CheckFree("+i+")\">Add</button></td>"
+					show+="</tr>";
+					$('#table_body').append(show);
+					if(data[i].time.day[1])
+					{
+						show="";
+						show+="<td></td>";
+						show+="<td></td>";
+						show+="<td></td>";
+						show+="<td></td>";
+						
+						show+="<td>"+data[i].time.day[1]+" "+data[i].time.start[1]+"-"+data[i].time.end[1]+"</td>";
+						show+="</tr>";
+						$('#table_body').append(show);
+					}
+				}
+			}
+			function CheckFree(i)
+			{
+				var CheckT=0;
+				for(var j = data[i].addStart[0];j<=data[i].addEnd[0];j++)
+				{
+					if(data[i].time.day[0]=="Mon")
+					{
+						if(m[j]=="1"){CheckT=1;break;}
+					}
+					if(data[i].time.day[0]=="Tue")
+					{
+						if(t[j]=="1"){CheckT=1;break;}
+					}
+					if(data[i].time.day[0]=="Wed")
+					{
+						if(w[j]=="1"){CheckT=1;break;}
+					}
+					if(data[i].time.day[0]=="Thu")
+					{
+						if(th[j]=="1"){CheckT=1;break;}
+					}
+					if(data[i].time.day[0]=="Fri")
+					{
+						if(f[j]=="1"){CheckT=1;break;}
+					}
+				}
+				if(data[i].time.day[1])
+				{
+					for(var j = data[i].addStart[1];j<=data[i].addEnd[1];j++)
+					{
+						if(data[i].time.day[1]=="Mon")
+						{
+							if(m[j]=="1"){CheckT=1;break;}
+						}
+						if(data[i].time.day[1]=="Tue")
+						{
+							if(t[j]=="1"){CheckT=1;break;}
+						}
+						if(data[i].time.day[1]=="Wed")
+						{
+							if(w[j]=="1"){CheckT=1;break;}
+						}
+						if(data[i].time.day[1]=="Thu")
+						{
+							if(th[j]=="1"){CheckT=1;break;}
+						}
+						if(data[i].time.day[1]=="Fri")
+						{
+							if(f[j]=="1"){CheckT=1;break;}
+						}
+					}
+				}
+				if(CheckT==0)addOnTable(i);
+				else window.alert("You not free on that time plz choose another section....");
+			}
+			function addOnTable(i)
+			{
+				var day="";
+				if(data[i].time.day[0]=="Mon")day="m";
+				if(data[i].time.day[0]=="Tue")day="t";
+				if(data[i].time.day[0]=="Wed")day="w";
+				if(data[i].time.day[0]=="Thu")day="th";
+				if(data[i].time.day[0]=="Fri")day="f";
+
+				var du=(data[i].addEnd[0]-data[i].addStart[0])+1;
+				$('#'+day+data[i].addStart[0]).attr('colspan',du);
+				for(var j=(data[i].addStart[0]*1)+1;j<(du*1)+(data[i].addStart[0]*1);j++){$('#'+day+j).hide();}
+				$('#'+day+data[i].addStart[0]).css('background','#CCCCCC');
+				$('#'+day+data[i].addStart[0]).html('<h5 style="text-align:center;">'+data[i].subject+'</h5><br><h5 style="text-align:center;font-size:8px">'+data[i].place+' ['+data[i].teacher+']</h5>')
+				for(var j = data[i].addStart[0];j<data[i].addEnd[0];j++)
+				{
+					if(day=="m")m[j]=1;
+					if(day=="m")t[j]=1;
+					if(day=="m")w[j]=1;
+					if(day=="m")th[j]=1;
+					if(day=="m")f[j]=1;
+				}
+				if(data[i].time.day[1])
+				{
+					var day="";
+				if(data[i].time.day[1]=="Mon")day="m";
+				if(data[i].time.day[1]=="Tue")day="t";
+				if(data[i].time.day[1]=="Wed")day="w";
+				if(data[i].time.day[1]=="Thu")day="th";
+				if(data[i].time.day[1]=="Fri")day="f";
+
+				var du=(data[i].addEnd[1]-data[i].addStart[1])+1;
+				$('#'+day+data[i].addStart[1]).attr('colspan',du);
+				for(var j=(data[i].addStart[1]*1)+1;j<(du*1)+(data[i].addStart[1]*1);j++){$('#'+day+j).hide();}
+				$('#'+day+data[i].addStart[1]).css('background','#CCCCCC');
+				$('#'+day+data[i].addStart[1]).html('<h5 style="text-align:center;">'+data[i].subject+'</h5><br><h5 style="text-align:center;font-size:8px">'+data[i].place+' ['+data[i].teacher+']</h5>')
+				for(var j = data[i].addStart[1];j<data[i].addEnd[1];j++)
+				{
+					if(day=="m")m[j]=1;
+					if(day=="m")t[j]=1;
+					if(day=="m")w[j]=1;
+					if(day=="m")th[j]=1;
+					if(day=="m")f[j]=1;
+				}
+				}
+
+			}
 		</script>
-		<div id="login_bar" style="background:#F0F5FA;height:35px;display:none;">
-			<div class="span6"style="background:#F0F5FA;width:60%;height:10px;">
-			</div>
-			<div id="logined"class="span4"style="padding:7px;">
-				<form class="well form-inline">
-					<input type="text" id="user" placeholder="Username" style="width:100px"></input>
-					<input type="password" id="pass" placeholder="Password" style="width:100px"></input>
-					<button class="btn btn-info btn-mini" onclick="login()">Login</button>
-				</form>
-			</div>
-		</div>
-		<div class="container">
-			<!--Calendar-->
-			<table  class="table table-bordered" style="font-size:9px; color:#FF0099;">
+		<div class="container" style="position: fixed;background:black;width:100%">
+			<table  id="main_table"class="table table-bordered" style="font-size:9px; color:#FF0099;background:black">
 				<thead>
-					<tr id="toptable">
+					<tr id="toptable" style="display:none">
 						<th style="width:60px"></th>
 						<td></td>
 						<td></td>
@@ -404,7 +207,7 @@
 				</thead>
 				<tbody>
 					<tr id="mon">
-						<th id="m0">Mon</th>
+						<th id="m0" style="background:#FFFF99">Mon</th>
 						<td id="m1"></td>
 						<td id="m2"></td>
 						<td id="m3"></td>
@@ -431,7 +234,7 @@
 						<td id="m24"></td>
 					</tr>
 					<tr id="tue">
-						<th id="t0">Tue</th>
+						<th id="t0" style="background:#FF99CC">Tue</th>
 						<td id="t1"></td>
 						<td id="t2"></td>
 						<td id="t3"></td>
@@ -458,7 +261,7 @@
 						<td id="t24"></td>
 					</tr>
 					<tr id="wed">
-						<th id="w0">Wed</th>
+						<th id="w0" style="background:#CCFF99">Wed</th>
 						<td id="w1"></td>
 						<td id="w2"></td>
 						<td id="w3"></td>
@@ -485,7 +288,7 @@
 						<td id="w24"></td>
 					</tr>
 					<tr id="thu">
-						<th id="th0">Thu</th>
+						<th id="th0" style="background:#FFCC99">Thu</th>
 						<td id="th1"></td>
 						<td id="th2"></td>
 						<td id="th3"></td>
@@ -512,7 +315,7 @@
 						<td id="th24"></td>
 					</tr>
 					<tr id="fri">
-						<th id="f0">Fri</th>
+						<th id="f0" style="background:#CCFFFF">Fri</th>
 						<td id="f1"></td>
 						<td id="f2"></td>
 						<td id="f3"></td>
@@ -538,8 +341,8 @@
 						<td id="f23"></td>
 						<td id="f24"></td>
 					</tr>
-					<tr id="sat">
-						<th id="s0">Sat</th>
+					<tr id="sat" style="display:none">
+						<th id="s0" style="background:#CC99FF">Sat</th>
 						<td id="s1"></td>
 						<td id="s2"></td>
 						<td id="s3"></td>
@@ -567,14 +370,19 @@
 					</tr>
 				</tbody>
 			</table>
-			<!--Subject-->
-			<div class="span12" style="height:25px"></div>
-			<div id="subject_chose"class="span7" style="height:400px;">
+			
+
+		</div>
+
+		<div class="container">
+		<div class="span15" style="height:250px"></div>
+			<div id="subject_chose" style="height:400px;">
 				<table class="table table-striped" style="width:100%;background:white;font-size:12px;text-align:center">
 					<thead>
 						<tr>
 							<th>Code</th>
-							<th>Sec</th>
+							<th>Subject</th>
+							<th>Section</th>
 							<th>Credit</th>
 							<th>Date-time</th>
 							<th>Room</th>
@@ -582,521 +390,10 @@
 							<th></th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<th>Sport</th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th id="SPbuttTable"><button class="btn btn-mini" onclick="SPbutt()">Show</button></th>
-						</tr>
-						<tr id="sp1">
-							<td>01175112</td>
-							<td>Badminton</td>
-							<td>1</td>
-							<td>Thu 8:00-10:00</td>
-							<td>Sports Office</td>
-							<td>Nattaya</td>
-							<td><button id="sp_b1"class="btn btn-info btn-mini" onclick="add('th','1','4','Badminton','sp','Sports Office')">Add</button></td>
-						</tr>
-						<tr id="sp2">
-							<td>01175114</td>
-							<td>Table Tennis</td>
-							<td>1</td>
-							<td>Fri 8:00-10:00</td>
-							<td>Chakkapan</td>
-							<td>Nartrapee</td>
-							<td><button id="sp_b2"class="btn btn-info btn-mini" onclick="add('f','1','4','Table Tennis','sp','Chakkapan')">Add</button></td>
-						</tr>
-						<tr id="sp3">
-							<td>01175123</td>
-							<td>Basketball</td>
-							<td>1</td>
-							<td>Fri 8:00-10:00</td>
-							<td>Chakkapan</td>
-							<td>Suwimon</td>
-							<td><button id="sp_b3"class="btn btn-info btn-mini" onclick="add('f','1','4','Basketball','sp','Chakkapan')">Add</button></td>
-						</tr>
-						<tr id="sp4">
-							<td>01175143</td>
-							<td>Social Dance</td>
-							<td>1</td>
-							<td>Thu 8:00-10:00</td>
-							<td>ED 1-301</td>
-							<td>Ashara</td>
-							<td><button id="sp_b4"class="btn btn-info btn-mini" onclick="add('th','1','4','Social Dance','sp','ED 1-301')">Add</button></td>
-						</tr>
-						<tr id="sp5">
-							<td>01175163</td>
-							<td>Golf</td>
-							<td>1</td>
-							<td>Fri 8:00-10:00</td>
-							<td>ED 1 floor</td>
-							<td>Dahsak</td>
-							<td><button id="sp_b5"class="btn btn-info btn-mini" onclick="add('f','1','4','Golf','sp','ED 1 floor')">Add</button></td>
-						</tr>
-						<tr id="sp6">
-							<td>01175165</td>
-							<td>Weight Training</td>
-							<td>1</td>
-							<td>Thu 8:00-10:00</td>
-							<td>Sports Office</td>
-							<td>Prasobchok</td>
-							<td><button id="sp_b6"class="btn btn-info btn-mini" onclick="add('th','1','4','Weight Training','sp','Sports Office')">Add</button></td>
-						</tr>
-						<tr>
-							<th>01200111</th>
-							<th colspan="3">Communication Skill for Engineer</th>
-							
-							
-							<th></th>
-							<th></th>
-							<th id="CSEbuttTable"><button class="btn btn-mini" onclick="CSEbutt()">Show</button></th>
-						</tr>
-						<tr id="cse1">
-							<td>01200111</td>
-							<td>450</td>
-							<td>3</td>
-							<td>Thu 13:00-17:00</td>
-							<td>17302</td>
-							<td></td>
-							<td><button id="cse_b1"class="btn btn-info btn-mini" onclick="add('th','11','8','Communication Skill for Engineer','cse','17302')">Add</button></td>
-						</tr>
-						<tr id="cse2">
-							<td>01200111</td>
-							<td>451</td>
-							<td>3</td>
-							<td>Wed 8:30-12:30</td>
-							<td>17302</td>
-							<td></td>
-							<td><button id="cse_b2"class="btn btn-info btn-mini" onclick="add('w','2','8','Communication Skill for Engineer','cse','17302')">Add</button></td>
-						</tr>
-						<tr id="cse3">
-							<td>01200111</td>
-							<td>452</td>
-							<td>3</td>
-							<td>Wed 8:30-12:30</td>
-							<td>17303</td>
-							<td></td>
-							<td><button id="cse_b3"class="btn btn-info btn-mini" onclick="add('w','2','8','Communication Skill for Engineer','cse','17303')">Add</button></td>
-						</tr>
-						<tr id="cse4">
-							<td>01200111</td>
-							<td>453</td>
-							<td>3</td>
-							<td>Sat 8:30-12:30</td>
-							<td>17302</td>
-							<td></td>
-							<td><button id="cse_b4"class="btn btn-info btn-mini" onclick="add('s','2','8','Communication Skill for Engineer','cse','17302')">Add</button></td>
-						</tr>
-						<tr id="cse5">
-							<td>01200111</td>
-							<td>454</td>
-							<td>3</td>
-							<td>Sat 8:30-12:30</td>
-							<td>17303</td>
-							<td></td>
-							<td><button id="cse_b5"class="btn btn-info btn-mini" onclick="add('s','2','8','Communication Skill for Engineer','cse','17303')">Add</button></td>
-						</tr>
-						<tr>
-							<th>01204111</th>
-							<th colspan="3">Computer and Programming</th>
-							
-							
-							<th></th>
-							<th></th>
-							<th id="CPbuttTable"><button class="btn btn-mini" onclick="CPbutt()">Show</button></th>
-						</tr>
-						<tr id="cp1">
-							<td>01204111</td>
-							<td>450</td>
-							<td>3</td>
-							<td>Thu 10:30-12:30</td>
-							<td>E503</td>
-							<td></td>
-							<td><button id="cp_b1"class="btn btn-info btn-mini" onclick="add('th','6','4','Computer and Programming','cp','E503');add('t','3','6','Computer and Programming Lab','cp','E0401');">Add</button></td>
-						</tr>
-						<tr id="cp1_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Tue 9:00-12:00 LAB</td>
-							<td>E0401</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr id="cp2">
-							<td>01204111</td>
-							<td>451</td>
-							<td>3</td>
-							<td>Thu 8:00-10:00</td>
-							<td>17303</td>
-							<td></td>
-							<td><button id="cp_b2"class="btn btn-info btn-mini" onclick="add('th','1','4','Computer and Programming','cp','17303');add('m','3','6','Computer and Programming Lab','cp','E0401')">Add</button></td>
-						</tr>
-						<tr id="cp2_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Mon 9:00-12:00 LAB</td>
-							<td>E0401</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>01208111</th>
-							<th colspan="3">Engineering Drawing</th>
-							
-							<th></th>
-							<th></th>
-							<th id="DbuttTable"><button class="btn btn-mini" onclick="Dbutt()">Show</button></th>
-						</tr>
-						<tr id="d1">
-							<td>01208111</td>
-							<td>450</td>
-							<td>3</td>
-							<td>Tue 13:00-15:00</td>
-							<td>17401</td>
-							<td></td>
-							<td><button id="d_b1"class="btn btn-info btn-mini" onclick="add('t','11','4','Drawing','d',17401);add('t','15','6','Drawing Lab','d','17401')">Add</button></td>
-						</tr>
-						<tr id="d1_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Tue 15:00-18:00 LAB</td>
-							<td>17401</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr id="d2">
-							<td>01208111</td>
-							<td>451</td>
-							<td>3</td>
-							<td>Tue 13:00-15:00</td>
-							<td>17402</td>
-							<td></td>
-							<td><button id="d_b2"class="btn btn-info btn-mini" onclick="add('t','11','4','Drawing','d','17402');add('t','15','6','Drawing Lab','d','17402')">Add</button></td>
-						</tr>
-						<tr id="d2_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Tue 15:00-18:00 LAB</td>
-							<td>17402</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr id="d3">
-							<td>01208111</td>
-							<td>452</td>
-							<td>3</td>
-							<td>Tue 13:00-15:00</td>
-							<td>3401</td>
-							<td></td>
-							<td><button id="d_b3"class="btn btn-info btn-mini" onclick="add('t','11','4','Drawing','d','3401');add('t','15','6','Drawing Lab','d','3401')">Add</button></td>
-						</tr>
-						<tr id="d3_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Tue 15:00-18:00 LAB</td>
-							<td>3401</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>01420111</th>
-							<th colspan="3">General Physic I</th>
-							
-							<th></th>
-							<th></th>
-							<th id="PbuttTable"><button class="btn btn-mini" onclick="Pbutt()">Show</button></th>
-						</tr>
-						<tr id="p1">
-							<td>01420111</td>
-							<td>450</td>
-							<td>3</td>
-							<td>Mon 15:00-16:30</td>
-							<td>17201</td>
-							<td>Kunrapan</td>
-							<td><button id="p_b1"class="btn btn-info btn-mini" onclick="add('m','15','3','Physic I','p','17201');add('w','15','3','Physic I','p','17201')">Add</button></td>
-						</tr>
-						<tr id="p1_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Wed 15:00-16:30</td>
-							<td>17301</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr id="p2">
-							<td>01420111</td>
-							<td>451</td>
-							<td>3</td>
-							<td>Mon 15:00-16:30</td>
-							<td>E5404</td>
-							<td>Nopparet</td>
-							<td><button id="p_b2"class="btn btn-info btn-mini" onclick="add('m','15','3','Physic I','p','E5404');add('w','15','3','Physic I','p','E5404')">Add</button></td>
-						</tr>
-						<tr id="p2_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Wed 15:00-16:30</td>
-							<td>E5404</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr id="p3">
-							<td>01420111</td>
-							<td>452</td>
-							<td>3</td>
-							<td>Mon 15:00-16:30</td>
-							<td>RDiPT101</td>
-							<td>Surasak</td>
-							<td><button id="p_b1"class="btn btn-info btn-mini" onclick="add('m','15','3','Physic I','p','RDiPT101');add('w','15','3','Physic I','p','RDiPT101')">Add</button></td>
-						</tr>
-						<tr id="p3_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Wed 15:00-16:30</td>
-							<td>RDiPT101</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>01420113</th>
-							<th colspan="3">Laboratory in Physic I</th>
-							
-							<th></th>
-							<th></th>
-							<th id="LPbuttTable"><button class="btn btn-mini" onclick="LPbutt()">Show</button></th>
-						</tr>
-						<tr id="lp1">
-							<td>01420113</td>
-							<td>450</td>
-							<td>1</td>
-							<td>Mon 17:00-20:00</td>
-							<td>SCL 401</td>
-							<td>Lenu</td>
-							<td><button id="lp_b1"class="btn btn-info btn-mini" onclick="add('m','19','6','Lab Physic I','lp','SCL 401')">Add</button></td>
-						</tr>
-						<tr id="lp2">
-							<td>01420113</td>
-							<td>451</td>
-							<td>1</td>
-							<td>Mon 17:00-20:00</td>
-							<td>SCL 405</td>
-							<td>Surasak</td>
-							<td><button id="lp_b2"class="btn btn-info btn-mini" onclick="add('m','19','6','Lab Physic I','lp','SCL 405')">Add</button></td>
-						</tr>
-						<tr id="lp3">
-							<td>01420113</td>
-							<td>452</td>
-							<td>1</td>
-							<td>Tue 17:00-20:00</td>
-							<td>SCL 401</td>
-							<td>Akkachai</td>
-							<td><button id="lp_b3"class="btn btn-info btn-mini" onclick="add('t','19','6','Lab Physic I','lp','SCL 401')">Add</button></td>
-						</tr>
-						<tr id="lp4">
-							<td>01420113</td>
-							<td>453</td>
-							<td>1</td>
-							<td>Tue 17:00-20:00</td>
-							<td>SCL 405</td>
-							<td>Khunrapan</td>
-							<td><button id="lp_b4"class="btn btn-info btn-mini" onclick="add('t','19','6','Lab Physic I','lp','SCL 405')">Add</button></td>
-						</tr>
-						<tr id="lp5">
-							<td>01420113</td>
-							<td>454</td>
-							<td>1</td>
-							<td>Thu 17:00-20:00</td>
-							<td>SCL 405</td>
-							<td>Lenu</td>
-							<td><button id="lp_b5"class="btn btn-info btn-mini" onclick="add('th','19','6','Lab Physic I','lp','SCL 405')">Add</button></td>
-						</tr>
-							<tr id="lp6">
-							<td>01420113</td>
-							<td>455</td>
-							<td>1</td>
-							<td>Thu 17:00-20:00</td>
-							<td>SCL 502</td>
-							<td>Khunrapan</td>
-							<td><button id="lp_b6"class="btn btn-info btn-mini" onclick="add('th','19','6','Lab Physic I','lp','SCL 502')">Add</button></td>
-						</tr>
-						<tr id="lp7">
-							<td>01420113</td>
-							<td>456</td>
-							<td>1</td>
-							<td>Mon 17:00-20:00</td>
-							<td>SCL 506</td>
-							<td>Akkachai</td>
-							<td><button id="lp_b7"class="btn btn-info btn-mini" onclick="add('th','19','6','Lab Physic I','lp','SCL 506')">Add</button></td>
-						</tr>
-						<tr>
-							<th>01417167</th>
-							<th colspan="3">Engineering Mathematics I</th>
-							
-							<th></th>
-							<th></th>
-							<th id="MbuttTable"><button class="btn btn-mini" onclick="Mbutt()">Show</button></th>
-						</tr>
-						<tr id="mt1">
-							<td>01417167</td>
-							<td>450</td>
-							<td>4</td>
-							<td>Wed 13:00-15:30</td>
-							<td>17201</td>
-							<td></td>
-							<td><button id="mt_b1"class="btn btn-info btn-mini" onclick="add('w','11','4','Math I','mt','17201');add('f','5','4','Math I','mt','17201')">Add</button></td>
-						</tr>
-						<tr id="mt1_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Fri 10:00-12:00</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr id="mt2">
-							<td>01417167</td>
-							<td>451</td>
-							<td>4</td>
-							<td>Wed 13:00-15:30</td>
-							<td>E5404</td>
-							<td></td>
-							<td><button id="mt_b2"class="btn btn-info btn-mini" onclick="add('w','11','4','Math I','mt','E5404');add('f','5','4','Math I','mt','E5404')">Add</button></td>
-						</tr>
-						<tr id="mt2_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Fri 10:00-12:00</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr id="mt3">
-							<td>01417167</td>
-							<td>452</td>
-							<td>4</td>
-							<td>Wed 13:00-15:30</td>
-							<td>RDiPT101</td>
-							<td></td>
-							<td><button id="mt_b3"class="btn btn-info btn-mini" onclick="add('w','11','4','Math I','mt','RDiPT101');add('f','5','4','Math I','mt','RDiPT101')">Add</button></td>
-						</tr>
-						<tr id="mt3_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Fri 10:00-12:00</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>01355112</th>
-							<th colspan="3">Fondation English II</th>
-							
-							<th></th>
-							<th></th>
-							<th id="EbuttTable"><button class="btn btn-mini" onclick="Ebutt()">Show</button></th>
-						</tr>
-						<tr id="e1">
-							<td>01355112</td>
-							<td>450</td>
-							<td>3</td>
-							<td>Mon 13:00-14:30</td>
-							<td>LH4 505</td>
-							<td></td>
-							<td><button id="e_b1"class="btn btn-info btn-mini" onclick="add('m','11','3','Eng II','e','LH4 505');add('f','11','3','Eng II','e','LH4 505')">Add</button></td>
-						</tr>
-						<tr id="e1_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Fri 13:00-14:30</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr id="e2">
-							<td>01355112</td>
-							<td>451</td>
-							<td>3</td>
-							<td>Mon 13:00-14:30</td>
-							<td>LH4 703</td>
-							<td></td>
-							<td><button id="e_b2"class="btn btn-info btn-mini" onclick="add('m','11','3','Eng II','e','LH4 703');add('f','11','3','Eng II','e','LH4 703')">Add</button></td>
-						</tr>
-						<tr id="e2_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Fri 13:00-14:30</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr id="e3">
-							<td>01355112</td>
-							<td>452</td>
-							<td>3</td>
-							<td>Mon 13:00-14:30</td>
-							<td>LH2 310</td>
-							<td></td>
-							<td><button id="e_b3"class="btn btn-info btn-mini" onclick="add('m','11','3','Eng II','e','LH2 310');add('f','11','3','Eng II','e','LH2 310')">Add</button></td>
-						</tr>
-						<tr id="e3_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Fri 13:00-14:30</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr id="e4">
-							<td>01355112</td>
-							<td>453</td>
-							<td>3</td>
-							<td>Mon 13:00-14:30</td>
-							<td>HUM4 407</td>
-							<td></td>
-							<td><button id="e_b4"class="btn btn-info btn-mini" onclick="add('m','11','3','Eng II','e','HUM4 407');add('f','11','3','Eng II','e','HUM4 407')">Add</button></td>
-						</tr>
-						<tr id="e4_1">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>Fri 13:00-14:30</td>
-							<td>LH4 704</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>	
-				</table>
-			</div>
-			<div id="subject_list"class="span4" style="height:400px;background:white;">
-				<table class="table table-striped" style="width:100%;background:white;font-size:12px;text-align:center">
-					<thead>
-						<tr>
-							<th colspan="2" >List</th>
-						</tr>
-					</thead>
-					<tbody id="chosed">
-
+					<tbody id="table_body">
 					</tbody>
 				</table>
 			</div>
-		</div>	
+		</div>
+
 	</body>
-</html>
