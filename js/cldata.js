@@ -48,8 +48,8 @@ var data =[
 			{"sc":"10","code":"01417167","subject":"Engineering Mathematics I","credit":"4","time":{"day":["Wed","Fri"],"start":["10:30","15:00"],"end":["12:30","17:00"]},"place":"17304","teacher":"","sec":"450","addStart":[5,15],"addEnd":[9,18]},
 			
 
-			{"sc":"10","code":"01417168","subject":"Engineering Mathematics II","credit":"3","time":{"day":["Wed","Fri"],"start":["10:30","15:00"],"end":["12:30","17:00"]},"place":"17201","teacher":"","sec":"450","addStart":[5,15],"addEnd":[9,18]},
-			{"sc":"10","code":"01417168","subject":"Engineering Mathematics II","credit":"3","time":{"day":["Wed","Fri"],"start":["10:30","15:00"],"end":["12:30","17:00"]},"place":"17303","teacher":"","sec":"451","addStart":[5,15],"addEnd":[9,18]},];
+			{"sc":"10","code":"01417168","subject":"Engineering Mathematics II","credit":"3","time":{"day":["Wed","Fri"],"start":["10:30","15:00"],"end":["12:30","17:00"]},"place":"17201","teacher":"","sec":"450","addStart":[6,15],"addEnd":[9,18]},
+			{"sc":"10","code":"01417168","subject":"Engineering Mathematics II","credit":"3","time":{"day":["Wed","Fri"],"start":["10:30","15:00"],"end":["12:30","17:00"]},"place":"17303","teacher":"","sec":"451","addStart":[6,15],"addEnd":[9,18]},];
 							
 							
 							
