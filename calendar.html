@@ -39,7 +39,7 @@
 					show+="<td>"+data[i].time.day[0]+" "+data[i].time.start[0]+"-"+data[i].time.end[0]+"</td>";
 					show+="<td>"+data[i].place+"</td>";
 					show+="<td>"+data[i].teacher+"</td>";
-					show+="<td><button id=\"bt_"+i+"\"class=\"btn btn-info btn-mini\" onclick=\"CheckFree("+i+")\">Add</button></td>"
+					show+="<td><button id=\"bt_"+i+"\"class=\"btn btn-info btn-mini\" onclick=\"CheckFree("+i+")\" style=\"display:\">Add</button> <button id=\"btr_"+i+"\"class=\"btn btn-danger btn-mini\" onclick=\"remove("+i+")\" style=\"display:none\">Remove</button></td>"
 					show+="</tr>";
 					$('#table_body').append(show);
 					if(data[i].time.day[1])
@@ -124,7 +124,7 @@
 				$('#'+day+data[i].addStart[0]).attr('colspan',du);
 				for(var j=(data[i].addStart[0]*1)+1;j<(du*1)+(data[i].addStart[0]*1);j++){$('#'+day+j).hide();}
 				$('#'+day+data[i].addStart[0]).css('background','#CCCCCC');
-				$('#'+day+data[i].addStart[0]).html('<h5 style="text-align:center;">'+data[i].subject+'</h5><br><h5 style="text-align:center;font-size:8px">'+data[i].place+' ['+data[i].teacher+']</h5>')
+				$('#'+day+data[i].addStart[0]).html('<p style="text-align:center;font-size:5px">'+data[i].subject+'<br>'+data[i].place+' ['+data[i].teacher+']</p>')
 				for(var j = data[i].addStart[0];j<data[i].addEnd[0];j++)
 				{
 					if(day=="m")m[j]=1;
@@ -146,7 +146,7 @@
 				$('#'+day+data[i].addStart[1]).attr('colspan',du);
 				for(var j=(data[i].addStart[1]*1)+1;j<(du*1)+(data[i].addStart[1]*1);j++){$('#'+day+j).hide();}
 				$('#'+day+data[i].addStart[1]).css('background','#CCCCCC');
-				$('#'+day+data[i].addStart[1]).html('<h5 style="text-align:center;">'+data[i].subject+'</h5><br><h5 style="text-align:center;font-size:8px">'+data[i].place+' ['+data[i].teacher+']</h5>')
+				$('#'+day+data[i].addStart[1]).html('<p style="text-align:center;font-size:5px">'+data[i].subject+'<br>'+data[i].place+' ['+data[i].teacher+']</p>')
 				for(var j = data[i].addStart[1];j<data[i].addEnd[1];j++)
 				{
 					if(day=="m")m[j]=1;
@@ -156,11 +156,72 @@
 					if(day=="f")f[j]=1;
 				}
 				}
+				$("#bt_"+i).css("display","none");
+				$("#btr_"+i).css("display","");
+				$("#"+i).addClass('success');
+
+
+			}
+			function remove(i)
+			{
+				var day="";
+				if(data[i].time.day[0]=="Mon")day="m";
+				if(data[i].time.day[0]=="Tue")day="t";
+				if(data[i].time.day[0]=="Wed")day="w";
+				if(data[i].time.day[0]=="Thu")day="th";
+				if(data[i].time.day[0]=="Fri")day="f";
+
+				var du=(data[i].addEnd[0]-data[i].addStart[0])+1;
+
+				$('#'+day+data[i].addStart[0]).attr('colspan',1);
+      			for(var j=(data[i].addStart[0]*1)+1;j<(du*1)+(data[i].addStart[0]*1);j++){$('#'+day+j).show();}
+		        $('#'+day+data[i].addStart[0]).css('background','black');
+        		$('#'+day+data[i].addStart[0]).html('')
+
+        		for(var j = data[i].addStart[0];j<data[i].addEnd[0];j++)
+				{
+					if(day=="m")m[j]=0;
+					if(day=="t")t[j]=0;
+					if(day=="w")w[j]=0;
+					if(day=="th")th[j]=0;
+					if(day=="f")f[j]=0;
+				}
+
+				if(data[i].time.day[1])
+				{
+					var day="";
+					if(data[i].time.day[1]=="Mon")day="m";
+					if(data[i].time.day[1]=="Tue")day="t";
+					if(data[i].time.day[1]=="Wed")day="w";
+					if(data[i].time.day[1]=="Thu")day="th";
+					if(data[i].time.day[1]=="Fri")day="f";
+
+					var du=(data[i].addEnd[1]-data[i].addStart[1])+1;
+
+					$('#'+day+data[i].addStart[1]).attr('colspan',1);
+	      			for(var j=(data[i].addStart[1]*1)+1;j<(du*1)+(data[i].addStart[1]*1);j++){$('#'+day+j).show();}
+			        $('#'+day+data[i].addStart[1]).css('background','black');
+        			$('#'+day+data[i].addStart[1]).html('')
+
+    	    		for(var j = data[i].addStart[1];j<data[i].addEnd[1];j++)
+					{
+						if(day=="m")m[j]=1;
+						if(day=="t")t[j]=1;
+						if(day=="w")w[j]=1;
+						if(day=="th")th[j]=1;
+						if(day=="f")f[j]=1;
+					}
+				}
+				$("#bt_"+i).css("display","");
+				$("#btr_"+i).css("display","none");
+				$("#"+i).removeClass('success');
+
+
 
 			}
 		</script>
-		<div class="container" style="position: fixed;background:black;width:100%">
-			<table  id="main_table"class="table table-bordered" style="font-size:9px; color:#FF0099;background:black">
+		<div class="container" style="position: fixed;background:black;width:100%;">
+			<table  id="main_table"class="table table-bordered" style="font-size:9px; color:#FF0099;background:black;height:230px">
 				<thead>
 					<tr id="toptable" style="display:none">
 						<th style="width:60px"></th>
