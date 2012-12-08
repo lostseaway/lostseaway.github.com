@@ -126,7 +126,7 @@
 				for(var j=(data[i].addStart[0]*1)+1;j<(du*1)+(data[i].addStart[0]*1);j++){$('#'+day+j).hide();}
 				$('#'+day+data[i].addStart[0]).css('background','#CCCCCC');
 				$('#'+day+data[i].addStart[0]).html('<p style="text-align:center;font-size:5px">['+data[i].code+"] "+data[i].subject+'<br>'+data[i].place+' ['+data[i].teacher+']</p>')
-				for(var j = data[i].addStart[0];j<data[i].addEnd[0];j++)
+				for(var j = data[i].addStart[0];j<=data[i].addEnd[0];j++)
 				{
 					if(day=="m")m[j]=1;
 					if(day=="t")t[j]=1;
@@ -148,7 +148,7 @@
 				for(var j=(data[i].addStart[1]*1)+1;j<(du*1)+(data[i].addStart[1]*1);j++){$('#'+day+j).hide();}
 				$('#'+day+data[i].addStart[1]).css('background','#CCCCCC');
 				$('#'+day+data[i].addStart[1]).html('<p style="text-align:center;font-size:5px">['+data[i].code+"] "+data[i].subject+'<br>'+data[i].place+' ['+data[i].teacher+']</p>')
-				for(var j = data[i].addStart[1];j<data[i].addEnd[1];j++)
+				for(var j = data[i].addStart[1];j<=data[i].addEnd[1];j++)
 				{
 					if(day=="m")m[j]=1;
 					if(day=="t")t[j]=1;
