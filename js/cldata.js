@@ -52,7 +52,7 @@ var data =[
 			{"sc":"10","code":"01417168","subject":"Engineering Mathematics II","credit":3,"time":{"day":["Wed","Fri"],"start":["10:30","15:00"],"end":["12:30","17:00"]},"place":"17303","teacher":"","sec":"451","addStart":[6,15],"addEnd":[9,18]},
 
 			{"sc":"11","code":"01999032","subject":"Thai Studies","credit":3,"time":{"day":["Mon"],"start":["13:00"],"end":["16:00"]},"place":"17402","teacher":"","sec":"450","addStart":[11],"addEnd":[16]},
-			{"sc":"11","code":"01999141","subject":"Man & Society","credit":3,"time":{"day":["Fir"],"start":["09:00"],"end":["12:00"]},"place":"17303","teacher":"","sec":"450","addStart":[3],"addEnd":[8]},
+			{"sc":"11","code":"01999141","subject":"Man & Society","credit":3,"time":{"day":["Fri"],"start":["09:00"],"end":["12:00"]},"place":"17303","teacher":"","sec":"450","addStart":[3],"addEnd":[8]},
 			{"sc":"11","code":"01999213","subject":"Environment, Technology & Life","credit":3,"time":{"day":["Fri"],"start":["09:00"],"end":["12:00"]},"place":"17201","teacher":"","sec":"450","addStart":[3],"addEnd":[8]},
 			{"sc":"11","code":"01453101","subject":"Introduction to Law","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"17303","teacher":"","sec":"450","addStart":[11],"addEnd":[16]},
 
