@@ -11,12 +11,12 @@ var data =[
 		
 
 			{"sc":"3","code":"01204111","subject":"Computer and Programming","credit":3,"time":{"day":["Mon"],"start":["17:00"],"end":["19:00"]},"place":"","teacher":"","sec":"450","addStart":[19],"addEnd":[22]},
-			{"sc":"3","code":"01204111","subject":"Computer and Programming Lab","credit":1,"time":{"day":["Fri"],"start":["09:00"],"end":["12:00"]},"place":"","teacher":"","sec":"450","addStart":[3],"addEnd":[8]},
-			{"sc":"3","code":"01204111","subject":"Computer and Programming Lab","credit":1,"time":{"day":[""],"start":[""],"end":[""]},"place":"E0401","teacher":"","sec":"451","addStart":[],"addEnd":[]},
+			{"sc":"3","code":"01204111","subject":"Computer and Programming Lab","credit":0,"time":{"day":["Fri"],"start":["09:00"],"end":["12:00"]},"place":"","teacher":"","sec":"450","addStart":[3],"addEnd":[8]},
+			{"sc":"3","code":"01204111","subject":"Computer and Programming Lab","credit":0,"time":{"day":[""],"start":[""],"end":[""]},"place":"E0401","teacher":"","sec":"451","addStart":[],"addEnd":[]},
 
 			{"sc":"4","code":"01219141","subject":"Object-Oriented Modeling & Programming","credit":3,"time":{"day":["Tue"],"start":["09:00"],"end":["12:00"]},"place":"E203","teacher":"James","sec":"450","addStart":[3],"addEnd":[8]},
-			{"sc":"4","code":"01219141","subject":"Object-Oriented Modeling & Programming Lab","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"E201","teacher":"James","sec":"450","addStart":[11],"addEnd":[16]},
-			{"sc":"4","code":"01219141","subject":"Object-Oriented Modeling & Programming Lab","credit":3,"time":{"day":["Thu"],"start":["16:00"],"end":["19:00"]},"place":"E201","teacher":"Parut","sec":"451","addStart":[17],"addEnd":[22]},
+			{"sc":"4","code":"01219141","subject":"Object-Oriented Modeling & Programming Lab","credit":1,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"E201","teacher":"James","sec":"450","addStart":[11],"addEnd":[16]},
+			{"sc":"4","code":"01219141","subject":"Object-Oriented Modeling & Programming Lab","credit":1,"time":{"day":["Thu"],"start":["16:00"],"end":["19:00"]},"place":"E201","teacher":"Parut","sec":"451","addStart":[17],"addEnd":[22]},
 
 
 			{"sc":"5","code":"01403117","subject":"Fundamentals Chemistry","credit":3,"time":{"day":["Wed","Thu"],"start":["08:30","08:30"],"end":["10:30","10:30"]},"place":"17201","teacher":"","sec":"450","addStart":[2,2],"addEnd":[5,5]},
