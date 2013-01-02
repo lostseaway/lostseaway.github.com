@@ -15,8 +15,13 @@ var data =[
 			{"sc":"3","code":"01204111","subject":"Computer and Programming Lab","credit":0,"time":{"day":[""],"start":[""],"end":[""]},"place":"E0401","teacher":"","sec":"451","addStart":[],"addEnd":[]},
 
 			{"sc":"4","code":"01219141","subject":"Object-Oriented Modeling & Programming","credit":3,"time":{"day":["Tue"],"start":["09:00"],"end":["12:00"]},"place":"E203","teacher":"James","sec":"450","addStart":[3],"addEnd":[8]},
+
 			{"sc":"4","code":"01219141","subject":"Object-Oriented Modeling & Programming Lab","credit":1,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"E201","teacher":"James","sec":"450","addStart":[11],"addEnd":[16]},
 			{"sc":"4","code":"01219141","subject":"Object-Oriented Modeling & Programming Lab","credit":1,"time":{"day":["Thu"],"start":["16:00"],"end":["19:00"]},"place":"E201","teacher":"Parut","sec":"451","addStart":[17],"addEnd":[22]},
+
+			{"sc":"4","code":"01219141","subject":"Object-Oriented Modeling & Programming Lab","credit":3,"time":{"day":["Wed"],"start":["16:00"],"end":["19:00"]},"place":"E201","teacher":"James","sec":"450","addStart":[17],"addEnd":[22]},
+			{"sc":"4","code":"01219141","subject":"Object-Oriented Modeling & Programming Lab","credit":3,"time":{"day":["Thu"],"start":["16:00"],"end":["19:00"]},"place":"E201","teacher":"Parut","sec":"451","addStart":[17],"addEnd":[22]},
+
 
 
 			{"sc":"5","code":"01403117","subject":"Fundamentals Chemistry","credit":3,"time":{"day":["Wed","Thu"],"start":["08:30","08:30"],"end":["10:30","10:30"]},"place":"17201","teacher":"","sec":"450","addStart":[2,2],"addEnd":[5,5]},
@@ -57,7 +62,12 @@ var data =[
 			{"sc":"11","code":"01453101","subject":"Introduction to Law","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"17303","teacher":"","sec":"450","addStart":[11],"addEnd":[16]},
 
 			{"sc":"12","code":"01208111","subject":"Engineering Drawing","credit":3,"time":{"day":["Tue","Tue"],"start":["10:00","13:00"],"end":["12:00","16:00"]},"place":"17401","teacher":"Arttaporn","sec":"450","addStart":[5,11],"addEnd":[8,16]},	
-			{"sc":"12","code":"01208111","subject":"Engineering Drawing","credit":3,"time":{"day":["Tue","Tue"],"start":["10:00","13:00"],"end":["12:00","16:00"]},"place":"17401","teacher":"Angchana","sec":"451","addStart":[5,11],"addEnd":[8,16]},];
+			{"sc":"12","code":"01208111","subject":"Engineering Drawing","credit":3,"time":{"day":["Tue","Tue"],"start":["10:00","13:00"],"end":["12:00","16:00"]},"place":"17401","teacher":"Angchana","sec":"451","addStart":[5,11],"addEnd":[8,16]},
+
+			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"","sec":"450","addStart":[11],"addEnd":[16]},
+			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"","sec":"451","addStart":[11],"addEnd":[16]},
+			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"","sec":"452","addStart":[11],"addEnd":[16]},
+			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"","sec":"453","addStart":[11],"addEnd":[16]},];
 							
 							
 							
