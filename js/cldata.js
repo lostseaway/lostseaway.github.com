@@ -14,7 +14,7 @@ var data =[
 			{"sc":"3","code":"01204111","subject":"Computer and Programming","credit":3,"time":{"day":["Mon"],"start":["17:00"],"end":["19:00"]},"place":"17303","teacher":"Jitti","sec":"451","addStart":[19],"addEnd":[22]},
 
 			{"sc":"3","code":"01204111","subject":"Computer and Programming Lab","credit":0,"time":{"day":["Mon"],"start":["09:00"],"end":["12:00"]},"place":"E0401","teacher":"Siripon","sec":"450","addStart":[3],"addEnd":[8]},
-			{"sc":"3","code":"01204111","subject":"Computer and Programming Lab","credit":0,"time":{"day":["Wed"],"start":["16:00"],"end":["19:00"]},"place":"E0401","teacher":"Jitti","sec":"451","addStart":[16],"addEnd":[22]},
+			{"sc":"3","code":"01204111","subject":"Computer and Programming Lab","credit":0,"time":{"day":["Wed"],"start":["16:00"],"end":["19:00"]},"place":"E0401","teacher":"Jitti","sec":"451","addStart":[17],"addEnd":[22]},
 
 			{"sc":"4","code":"01219141","subject":"Object-Oriented Modeling & Programming","credit":3,"time":{"day":["Tue"],"start":["09:00"],"end":["12:00"]},"place":"E203","teacher":"James","sec":"450","addStart":[3],"addEnd":[8]},
 
@@ -45,8 +45,8 @@ var data =[
 			{"sc":"9","code":"01420114","subject":"Lab General Physic II","credit":1,"time":{"day":["Mon"],"start":["17:00"],"end":["20:00"]},"place":"","teacher":"Nopparet","sec":"451","addStart":[19],"addEnd":[24]},
 			{"sc":"9","code":"01420114","subject":"Lab General Physic II","credit":1,"time":{"day":["Tue"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"Reanu","sec":"452","addStart":[11],"addEnd":[16]},
 			{"sc":"9","code":"01420114","subject":"Lab General Physic II","credit":1,"time":{"day":["Tue"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"Khunrapan","sec":"453","addStart":[11],"addEnd":[16]},
-			{"sc":"9","code":"01420114","subject":"Lab General Physic II","credit":1,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"Akkachai","sec":"454","addStart":[11],"addEnd":[16]},
-			{"sc":"9","code":"01420114","subject":"Lab General Physic II","credit":1,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"Surasak","sec":"455","addStart":[11],"addEnd":[16]},
+			{"sc":"9","code":"01420114","subject":"Lab General Physic II","credit":1,"time":{"day":["Thu"],"start":["17:00"],"end":["20:00"]},"place":"","teacher":"Akkachai","sec":"454","addStart":[19],"addEnd":[24]},
+			{"sc":"9","code":"01420114","subject":"Lab General Physic II","credit":1,"time":{"day":["Thu"],"start":["17:00"],"end":["20:00"]},"place":"","teacher":"Surasak","sec":"455","addStart":[19],"addEnd":[24]},
 
 
 			{"sc":"10","code":"01417167","subject":"Engineering Mathematics I","credit":4,"time":{"day":["Wed","Fri"],"start":["10:30","15:00"],"end":["12:30","17:00"]},"place":"17304","teacher":"","sec":"450","addStart":[6,15],"addEnd":[9,18]},
