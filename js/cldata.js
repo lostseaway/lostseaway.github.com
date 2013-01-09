@@ -63,10 +63,10 @@ var data =[
 			{"sc":"12","code":"01208111","subject":"Engineering Drawing","credit":3,"time":{"day":["Tue","Tue"],"start":["10:00","13:00"],"end":["12:00","16:00"]},"place":"17401","teacher":"Arttaporn","sec":"450","addStart":[5,11],"addEnd":[8,16]},	
 			{"sc":"12","code":"01208111","subject":"Engineering Drawing","credit":3,"time":{"day":["Tue","Tue"],"start":["10:00","13:00"],"end":["12:00","16:00"]},"place":"17401","teacher":"Angchana","sec":"451","addStart":[5,11],"addEnd":[8,16]},
 
-			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"","sec":"450","addStart":[11],"addEnd":[16]},
-			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"","sec":"451","addStart":[11],"addEnd":[16]},
-			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"","sec":"452","addStart":[11],"addEnd":[16]},
-			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"","teacher":"","sec":"453","addStart":[11],"addEnd":[16]},];
+			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"LH4-806","teacher":"Anek","sec":"450","addStart":[11],"addEnd":[16]},
+			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"LH4-807","teacher":"Jarinthon","sec":"451","addStart":[11],"addEnd":[16]},
+			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"LH4-704","teacher":"Bancha","sec":"452","addStart":[11],"addEnd":[16]},
+			{"sc":"13","code":"01355113","subject":"Foundation English III","credit":3,"time":{"day":["Wed"],"start":["13:00"],"end":["16:00"]},"place":"LH4-705","teacher":"Pongampai ","sec":"453","addStart":[11],"addEnd":[16]},];
 							
 							
 							
