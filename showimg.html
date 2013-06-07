@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>CPSK Shop's Logo Contest!</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/peerahad.js"></script>
+		<script>
+			$(document).on('ready', onStart)
+			function onStart()
+			{
+				for(var i=0;i<data.length;i++)
+				{
+					$('#content').append("<img src=\"img/senoir/"+data[i].img+".jpg\"style=\"height:200px\">")
+					$('#content').append("<img src=\"https://graph.facebook.com/"+data[i].facebook+"/picture?type=large\"><br>")
+					
+				}
+			}
+		</script>
+	</head>
+	<body style="background:#555;">
+		<div class="container" >
+			
+			<div id="content"></div>
+	</body>
+</html>
