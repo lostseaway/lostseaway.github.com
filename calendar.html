@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>
-		 Study Calendar V.2.00 beta
+		 Study Calendar DataBase V.2013-Draft 1st
 		</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<script src="js/jquery-1.7.1.min.js"></script>
@@ -147,7 +147,7 @@
 				$('#'+day+data[i].addStart[1]).attr('colspan',du);
 				for(var j=(data[i].addStart[1]*1)+1;j<(du*1)+(data[i].addStart[1]*1);j++){$('#'+day+j).hide();}
 				$('#'+day+data[i].addStart[1]).css('background','#CCCCCC');
-				$('#'+day+data[i].addStart[1]).html('<p style="text-align:center;font-size:5px">['+data[i].code+"] "+data[i].subject+'<br>'+data[i].place+' ['+data[i].teacher+']</p>')
+				$('#'+day+data[i].addStart[1]).html('<p style="text-align:center;font-size:10px">['+data[i].code+"] "+data[i].subject+'<br>'+data[i].place+' ['+data[i].teacher+']</p>')
 				for(var j = data[i].addStart[1];j<=data[i].addEnd[1];j++)
 				{
 					if(day=="m")m[j]=1;
