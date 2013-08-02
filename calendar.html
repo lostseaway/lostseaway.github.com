@@ -125,7 +125,7 @@
 				$('#'+day+data[i].addStart[0]).attr('colspan',du);
 				for(var j=(data[i].addStart[0]*1)+1;j<(du*1)+(data[i].addStart[0]*1);j++){$('#'+day+j).hide();}
 				$('#'+day+data[i].addStart[0]).css('background','#CCCCCC');
-				$('#'+day+data[i].addStart[0]).html('<p style="text-align:center;font-size:5px">['+data[i].code+"] "+data[i].subject+'<br>'+data[i].place+' ['+data[i].teacher+']</p>')
+				$('#'+day+data[i].addStart[0]).html('<p style="text-align:center;font-size:10px">['+data[i].code+"] "+data[i].subject+'<br>'+data[i].place+' ['+data[i].teacher+']</p>')
 				for(var j = data[i].addStart[0];j<=data[i].addEnd[0];j++)
 				{
 					if(day=="m")m[j]=1;
@@ -228,7 +228,7 @@
 		<div class="container" style="background:black;width:100%;">
 			<br>
 			<p style="text-align:center;font-size:30px;color:white">Credit : <a id="show_credit"></a></p>
-			<table  id="main_table"class="table table-bordered" style="font-size:11px; color:#FF0099;background:black;height:230px">
+			<table  id="main_table"class="table table-bordered" style="font-size:9px; color:#FF0099;background:black;height:230px">
 				<thead>
 					<tr id="toptable" style="display:none">
 						<th style="width:60px"></th>
